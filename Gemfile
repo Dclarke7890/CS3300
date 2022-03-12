@@ -32,6 +32,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
