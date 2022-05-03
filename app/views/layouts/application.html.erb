@@ -1,15 +1,62 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>CS3300</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
   </head>
 
   <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">DClarke Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://app.dclarke3-1-cs3300-2.uccs.devedu.io/projects">Home <span class="sr-only">(current)</span></a>
+          </li>
+
+          <% if !user_signed_in? %>
+          <li class="nav-item">
+            <a class="nav-link to home" href="/users/sign_in">Loggin</a>
+          </li>
+          <% end %>
+
+          <% if user_signed_in? %>
+           <li class="nav-item">
+           <a class="nav-link to add" href="/projects/new">Add Project</a>
+           </li>
+            <li class="nav-item">
+            <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    
+    
+
     <%= yield %>
   </body>
 </html>
+
+
+
+

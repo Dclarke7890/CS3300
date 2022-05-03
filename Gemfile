@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 
+gem 'jquery-rails'
+
 gem 'mini_racer'
   
 group :development, :test do
@@ -55,6 +57,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simplecov', require: false, group: :test
 
 gem 'devise'
+
+#iteration 6 
+
+gem 'bootstrap', '~> 4.6.1'
+
 
 
 group :development, :test do
