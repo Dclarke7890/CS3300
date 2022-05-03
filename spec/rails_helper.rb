@@ -68,5 +68,10 @@ SimpleCov.start 'rails' do
   add_filter '/db/'
   add_filter '/spec/' # for rspec
   add_filter '/lib/'
+  add_filter '/app/helpers'
+  add_filter '/app/assets'
+  add_filter '/app/jobs'
+  add_filter '/app/mailers'
+  add_filter '/app/channels'
 end
 

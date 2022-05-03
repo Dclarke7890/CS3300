@@ -27,7 +27,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-
+ #interation 5
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
 
